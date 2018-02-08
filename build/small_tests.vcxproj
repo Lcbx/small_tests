@@ -113,7 +113,6 @@
     <ClCompile Include="..\files\3Darray.cpp" />
     <ClCompile Include="..\files\conversion.cpp" />
     <ClCompile Include="..\files\CRTP_static_list.cpp" />
-    <ClCompile Include="..\files\debut_jeu_carte.cpp" />
     <ClCompile Include="..\files\deduce_interface.cpp" />
     <ClCompile Include="..\files\double_dispatch.cpp" />
     <ClCompile Include="..\files\ECS.cpp" />

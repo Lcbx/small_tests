@@ -10,9 +10,6 @@
     <ClCompile Include="..\files\CRTP_static_list.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\files\debut_jeu_carte.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="..\files\deduce_interface.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
