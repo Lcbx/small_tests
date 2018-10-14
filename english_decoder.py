@@ -148,6 +148,6 @@ while i<len(text):
 		print("=>" + result[i: i+pad]+ "\n")
 		i+=pad
 
-		# pretty print of the result
+# pretty print of the result
 print("\n\"\"\"" + result + "\"\"\"")
 
