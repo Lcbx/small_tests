@@ -47,7 +47,6 @@ translator = {
 
 "L":" ",
 
-
 "I":"A",
 "Q":"N",
 "U":"D",
@@ -82,6 +81,7 @@ translator = {
 "C":"Q",
 "P":"M",
 
+
 }
 
 # [char]=>"[all possible letters]"
@@ -89,8 +89,9 @@ symbols =[x[0] for x in symbols]
 candidates = {}
 # we put the possible translations in candidates
 for i, c in enumerate(symbols):
-	index = int(i/len(symbols)*len(english)+0.1)
-	candidates[c] = english[index]
+	if c not in candidates:
+		index = int(i/len(symbols)*len(english)+0.1)
+		candidates[c] = english[index]
 #print("candidates :\n", candidates, "\n")
 
 
