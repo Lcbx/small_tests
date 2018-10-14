@@ -42,8 +42,11 @@ translator = {
 
 # test substitutions here
 # => put the letters you found in here
+# don't forget to put one of the most frequent character as " " (space)
+# it's the most important step
 
 "L":" ",
+
 
 "I":"A",
 "Q":"N",
@@ -88,13 +91,11 @@ candidates = {}
 for i, c in enumerate(symbols):
 	index = int(i/len(symbols)*len(english)+0.1)
 	candidates[c] = english[index]
-print("candidates :\n", candidates, "\n")
+#print("candidates :\n", candidates, "\n")
 
 
-size = len(text)
-text += "@@@@@@" #padding
+
 possibleTranslations = {}
-
 # a helper function
 def publish(key, value):
 	if key in possibleTranslations:
@@ -104,6 +105,8 @@ def publish(key, value):
 
 # a probality score is computed for a code to be a specific letter,
 # based on the sequences  found “often” in english
+size = len(text)
+text += "@@@@@@" #padding
 for i in range(size):
 	for t in often:
 		similar = True
@@ -115,7 +118,7 @@ for i in range(size):
 				publish( (text[i + j], c), len(t) )
 
 possibleTranslations = sorted(possibleTranslations.items(), key = lambda x: x[1], reverse = True)
-print("possible translations :\n", possibleTranslations, "\n")
+#print("possible translations :\n", possibleTranslations, "\n")
 
 
 # the most probable translations are added first
@@ -123,7 +126,7 @@ for item, f in possibleTranslations:
 	code, char = item
 	if code not in translator and char not in translator.values():
 		translator[code] = char
-print("translator :\n", translator, "\n")
+#print("translator :\n", translator, "\n")
 
 
 
@@ -136,7 +139,7 @@ for c in text:
 
 # a one code/one letter display is pretty usefull
 i = 0 
-pad = 80		
+pad = 76	
 while i<len(text):
 		if i+pad>len(text):
 			pad = len(text)-i
