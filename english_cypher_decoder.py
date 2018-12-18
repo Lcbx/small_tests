@@ -84,7 +84,7 @@ translator = {
 
 }
 
-# [char]=>"[all possible letters]"
+# candidates[char]=>"<all possible letters>"
 symbols =[x[0] for x in symbols]
 candidates = {}
 # we put the possible translations in candidates
