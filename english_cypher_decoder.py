@@ -34,7 +34,7 @@ print ("fequencies found :\n", symbols, "\n")
 english = ( " EART", " EARTIONSLH", "RTIONSLHDC", "SLHDCUMPGB","UMPGBGBFYWK", "FYWKVXZJQ",)
 
 # sequences of letters often found in text
-often = ("TH", "HE", "IN", "EN", "NT", "RE", "ER", "AN", "TI", "ES", "ON", "AT", "SE", "ND", "OR", "AR", "AL", "TE", "CO", "DE", "TO", "RA", "ET", "ED", "IT", "SA", "EM", "RO",  "THE", "AND", "THA", "ENT", "ING", "FOR", "NDE", "HAS", "NCE", "EDT", "TIS", "OFT", "STH", "MEN", "TION", )
+often = ("TH", "HE", "IN", "EN", "NT", "RE", "ER", "AN", "TI", "ES", "ON", "AT", "SE", "ND", "OR", "AR", "AL", "TE", "CO", "DE", "TO", "RA", "ET", "ED", "IT", "SA", "EM", "RO",  "THE", "AND", "THA", "ENT", "ING", "FOR", "NDE", "HAS", "NCE", "EDT", "TIS", "OFT", "MEN", "TION", )
 
 
 
@@ -51,40 +51,17 @@ translator = {
 "Q":"N",
 "U":"D",
 
-
 "E" :"F",
 "H":"O",
 "V":"R",
-
-
-"H":"O",
-"E":"F",
-
 
 "N":"W",
 "B":"H",
 "M":"I",
 
-
-"G":"C",
-"F":"E",
-
-"X":"T",
-"T":"L",
-"R":"U",
-"D":"S",
-"J":"P",
-"A":"Y",
-"S":"G",
-"K":"H",
-"@":"V",
-"C":"Q",
-"P":"M",
-
-
 }
 
-# candidates[char]=>"<all possible letters>"
+# candidates[char]=> [all possible letters, in a string]
 symbols =[x[0] for x in symbols]
 candidates = {}
 # we put the possible translations in candidates
@@ -135,7 +112,12 @@ for item, f in possibleTranslations:
 result = ""
 for c in text:
 	if c not in translator:
-		translator[c] = random.choice(candidates[c])
+		candidate = ""
+		while True:
+			candidate = random.choice(candidates[c])
+			if candidate not in translator.values() :
+				break
+		translator[c] = candidate
 	result += translator[c]
 
 # a one code/one letter display is pretty usefull
