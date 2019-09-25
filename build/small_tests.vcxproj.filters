@@ -55,5 +55,8 @@
     <ClCompile Include="..\files\3Darray.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="..\files\orderedHashmap.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

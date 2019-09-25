@@ -122,6 +122,7 @@
     <ClCompile Include="..\files\inherit_list.cpp" />
     <ClCompile Include="..\files\list_of_func.cpp" />
     <ClCompile Include="..\files\dynamic_functions.cpp" />
+    <ClCompile Include="..\files\orderedHashmap.cpp" />
     <ClCompile Include="..\files\Order_base.cpp" />
     <ClCompile Include="..\files\Order_composite.cpp" />
     <ClCompile Include="..\files\strategie.cpp" />
