@@ -31,7 +31,7 @@ print ("fequencies found :\n", symbols, "\n")
 
 
 # classes of letters depending on frequency 
-english = ( " EART", " EARTIONSLH", "RTIONSLHDC", "SLHDCUMPGB","UMPGBGBFYWK", "FYWKVXZJQ",)
+english = (  " EAT", " EARTIONSLH", "RTIONSLHDC", "SLHDCUMPGB","UMPGBGBFYWK", "FYWKVXZJQ" )
 
 # sequences of letters often found in text
 often = ("TH", "HE", "IN", "EN", "NT", "RE", "ER", "AN", "TI", "ES", "ON", "AT", "SE", "ND", "OR", "AR", "AL", "TE", "CO", "DE", "TO", "RA", "ET", "ED", "IT", "SA", "EM", "RO",  "THE", "AND", "THA", "ENT", "ING", "FOR", "NDE", "HAS", "NCE", "EDT", "TIS", "OFT", "MEN", "TION", )
@@ -47,17 +47,17 @@ translator = {
 
 "L":" ",
 
-"I":"A",
-"Q":"N",
-"U":"D",
+# "I":"A",
+# "Q":"N",
+# "U":"D",
 
-"E" :"F",
-"H":"O",
-"V":"R",
+# "E" :"F",
+# "H":"O",
+# "V":"R",
 
-"N":"W",
-"B":"H",
-"M":"I",
+# "N":"W",
+# "B":"H",
+# "M":"I",
 
 }
 
@@ -113,9 +113,11 @@ result = ""
 for c in text:
 	if c not in translator:
 		candidate = ""
+		i = 10
 		while True:
 			candidate = random.choice(candidates[c])
-			if candidate not in translator.values() :
+			i-=1
+			if candidate not in translator.values()  or i <0:
 				break
 		translator[c] = candidate
 	result += translator[c]
