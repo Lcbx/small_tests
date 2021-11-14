@@ -62,7 +62,7 @@ class AbstractNode:
 		while exploredLevel != level:
 			current = current.getParent()
 			exploredLevel -=1
-			current._EndPrintTree(level)
+			current._EndPrintTree(exploredLevel)
 	
 	def _EndPrintTree(self, level):
 		it = self.getChildren()

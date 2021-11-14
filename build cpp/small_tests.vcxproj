@@ -40,8 +40,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -119,6 +119,7 @@
     <ClCompile Include="..\cpp files\ECS_templates.cpp" />
     <ClCompile Include="..\cpp files\factory.cpp" />
     <ClCompile Include="..\cpp files\func_ptr.cpp" />
+    <ClCompile Include="..\cpp files\Hierarchy.cpp" />
     <ClCompile Include="..\cpp files\inherit_list.cpp" />
     <ClCompile Include="..\cpp files\list_of_func.cpp" />
     <ClCompile Include="..\cpp files\dynamic_functions.cpp" />
