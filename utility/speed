@@ -1,0 +1,2 @@
+#!/bin/bash
+./ffmpeg -i "$2" -filter:a "atempo=$1" -vn "_$2"

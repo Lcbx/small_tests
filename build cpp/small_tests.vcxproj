@@ -110,23 +110,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\files\3Darray.cpp" />
-    <ClCompile Include="..\files\conversion.cpp" />
-    <ClCompile Include="..\files\CRTP_static_list.cpp" />
-    <ClCompile Include="..\files\deduce_interface.cpp" />
-    <ClCompile Include="..\files\double_dispatch.cpp" />
-    <ClCompile Include="..\files\ECS.cpp" />
-    <ClCompile Include="..\files\ECS_templates.cpp" />
-    <ClCompile Include="..\files\factory.cpp" />
-    <ClCompile Include="..\files\func_ptr.cpp" />
-    <ClCompile Include="..\files\inherit_list.cpp" />
-    <ClCompile Include="..\files\list_of_func.cpp" />
-    <ClCompile Include="..\files\dynamic_functions.cpp" />
-    <ClCompile Include="..\files\orderedHashmap.cpp" />
-    <ClCompile Include="..\files\Order_base.cpp" />
-    <ClCompile Include="..\files\Order_composite.cpp" />
-    <ClCompile Include="..\files\strategie.cpp" />
-    <ClCompile Include="..\files\virtual_array.cpp" />
+    <ClCompile Include="..\cpp files\3Darray.cpp" />
+    <ClCompile Include="..\cpp files\conversion.cpp" />
+    <ClCompile Include="..\cpp files\CRTP_static_list.cpp" />
+    <ClCompile Include="..\cpp files\deduce_interface.cpp" />
+    <ClCompile Include="..\cpp files\double_dispatch.cpp" />
+    <ClCompile Include="..\cpp files\ECS.cpp" />
+    <ClCompile Include="..\cpp files\ECS_templates.cpp" />
+    <ClCompile Include="..\cpp files\factory.cpp" />
+    <ClCompile Include="..\cpp files\func_ptr.cpp" />
+    <ClCompile Include="..\cpp files\inherit_list.cpp" />
+    <ClCompile Include="..\cpp files\list_of_func.cpp" />
+    <ClCompile Include="..\cpp files\dynamic_functions.cpp" />
+    <ClCompile Include="..\cpp files\orderedHashmap.cpp" />
+    <ClCompile Include="..\cpp files\Order_base.cpp" />
+    <ClCompile Include="..\cpp files\Order_composite.cpp" />
+    <ClCompile Include="..\cpp files\strategie.cpp" />
+    <ClCompile Include="..\cpp files\virtual_array.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
