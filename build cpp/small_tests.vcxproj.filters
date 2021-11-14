@@ -7,56 +7,59 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\files\CRTP_static_list.cpp">
+    <ClCompile Include="..\cpp files\3Darray.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\files\deduce_interface.cpp">
+    <ClCompile Include="..\cpp files\conversion.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\files\double_dispatch.cpp">
+    <ClCompile Include="..\cpp files\CRTP_static_list.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\files\factory.cpp">
+    <ClCompile Include="..\cpp files\deduce_interface.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\files\func_ptr.cpp">
+    <ClCompile Include="..\cpp files\double_dispatch.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\files\inherit_list.cpp">
+    <ClCompile Include="..\cpp files\ECS.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\files\list_of_func.cpp">
+    <ClCompile Include="..\cpp files\ECS_templates.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\files\Order_base.cpp">
+    <ClCompile Include="..\cpp files\factory.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\files\Order_composite.cpp">
+    <ClCompile Include="..\cpp files\func_ptr.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\files\strategie.cpp">
+    <ClCompile Include="..\cpp files\inherit_list.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\files\dynamic_functions.cpp">
+    <ClCompile Include="..\cpp files\list_of_func.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\files\ECS.cpp">
+    <ClCompile Include="..\cpp files\dynamic_functions.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\files\ECS_templates.cpp">
+    <ClCompile Include="..\cpp files\orderedHashmap.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\files\conversion.cpp">
+    <ClCompile Include="..\cpp files\Order_base.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\files\virtual_array.cpp">
+    <ClCompile Include="..\cpp files\Order_composite.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\files\3Darray.cpp">
+    <ClCompile Include="..\cpp files\strategie.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\files\orderedHashmap.cpp">
+    <ClCompile Include="..\cpp files\virtual_array.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
