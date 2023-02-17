@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Set Artist, Titlem album and track # based on mp3 files
+Set Artist, Title, album and track # based on mp3 files
 Usage -
 	python mp3Artists.py <path/to/directory>
 		path to files is optional. Path needs to be absolute
@@ -50,23 +50,23 @@ def process(path):
 					name = ''.join(cutFile[1:])[:-4].strip()
 				
 				try:
-					audio = EasyID3(file)
+					metadata = EasyID3(file)
 				except:
-					audio = mutagen.File(file, easy=True)
-					audio.add_tags()
+					metadata = mutagen.File(file, easy=True)
+					metadata.add_tags()
 				
-				#print(audio)
-				if 'album' not in str(audio):
+				#print(metadata)
+				if 'album' not in str(metadata):
 					#print(f'setting stuff')
-					audio["title"] = name
-					audio["artist"] = artist
-					audio["album"] = 'Youtube'
-					audio["tracknumber"] = '1'
-					audio.save()
+					metadata["title"] = name
+					metadata["artist"] = artist
+					metadata["album"] = 'Youtube'
+					metadata["tracknumber"] = '1'
+					metadata.save()
 					#newName = name + '.mp3'
 					#os.rename(file, newName)
-					#audio.save(newName)
-					#print(audio)
+					#metadata.save(newName)
+					#print(metadata)
 
 
 if __name__=='__main__':
@@ -88,12 +88,12 @@ if __name__=='__main__':
 
 # from mutagen.easyid3 import EasyID3
 # p = "E:\\Musik\\Aeon\\2005 Bleeding the False\\01 Cenobites - Copy.mp3"
-# audio = EasyID3(p)
-# audio["title"] = u"t"
-# audio["artist"] = u"a"
-# audio["album"] = "al"
-# audio["date"] = u"2000"
-# audio["tracknumber"] = u"1"
-# audio["genre"] = u"g"
-# audio.save()
+# metadata = EasyID3(p)
+# metadata["title"] = u"t"
+# metadata["artist"] = u"a"
+# metadata["album"] = "al"
+# metadata["date"] = u"2000"
+# metadata["tracknumber"] = u"1"
+# metadata["genre"] = u"g"
+# metadata.save()
 # print('\n'.join(EasyID3.valid_keys.keys()))
