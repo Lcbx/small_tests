@@ -28,11 +28,6 @@ class AbstractNode:
 	###
 	# functions used to verify tree is legit :
 	
-	def __repr__(self):
-		return f"{type(self).__name__ }: {self.name} { ','.join(child.name for child in self.getChildren() )}"
-	def __str__(self):
-		return self.name
-	
 	def countNodes(self):
 		total_nodes = 1
 		for child in self.getChildren():
@@ -104,6 +99,9 @@ relationDict = {}
 @dataclass
 class MyNode(AbstractNode):
 	hash : int = 0
+	
+	def __hash__(self):
+		return hash
 	
 	def getParent(self):
 		global relationDict
@@ -196,9 +194,6 @@ if __name__ == '__main__':
 	relationDict = {}
 	hierarchyMine = buildRandomHierarchy(MyNode, SIZE)
 	#hierarchyMine[0].printTree()
-	
-	# TODO : better test : we have a list of Nodes and we want to traverse them and their children the fastest way possible
-	# my method can help us iterate the hierarchy in a memory-firendly way
 	
 	def test(node):
 		def apply():

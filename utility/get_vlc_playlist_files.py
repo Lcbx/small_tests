@@ -19,18 +19,22 @@ from os import makedirs
 from urllib.parse import unquote, urlparse
 from shutil import copy2
 
-OUTPUT_DIR = "./tracks/"
+OUTPUT_DIR = "./"
 
-file = glob('*.xspf')
-tree = ET.parse(file[0])
+filePaths = glob('*.xspf')
+listPath = filePaths[0]
+listName = basename(listPath.split('.')[0])
+
+tree = ET.parse(listPath)
 root = tree.getroot()
 
 tracklist = [child for child in root if child.tag.endswith('trackList')][0]
 for track in tracklist:
 	path = [child.text for child in track if child.tag.endswith('location')][0]
 	path = unquote(path.replace("file:///", ""))
-	#print(path, exists(path))
+	#print(path)
 	
 	# copy
-	if not exists(OUTPUT_DIR): makedirs(OUTPUT_DIR)
-	copy2(path, OUTPUT_DIR)
+	dirName = f'{OUTPUT_DIR}/{listName}/'
+	if not exists(dirName): makedirs(dirName)
+	copy2(path, dirName)
