@@ -56,7 +56,8 @@ def process(path):
 					metadata.add_tags()
 				
 				#print(metadata)
-				if 'album' not in str(metadata):
+				#print(metadata['album'])
+				if 'album' not in str(metadata) or metadata['album'] == ['Youtube']:
 					#print(f'setting stuff')
 					metadata["title"] = name
 					metadata["artist"] = artist
